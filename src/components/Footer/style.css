@@ -1,0 +1,48 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 100px;
+    color: #fff;
+    background: hsl(229, 31%, 21%);
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__list li {
+    margin-block: 15px;
+    list-style: none;
+}
+
+.cta a {
+    margin-inline: 10px;
+}
+
+footer .logo {
+    filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(43deg) brightness(102%) contrast(101%);
+
+}
+
+@media screen and (min-width:768px) {
+    footer {
+        flex-direction: row;
+    }
+
+    .nav__list {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .nav__list li {
+        margin-inline: 10px;
+    }
+
+}

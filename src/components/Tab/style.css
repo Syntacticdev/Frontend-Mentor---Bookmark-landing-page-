@@ -1,0 +1,147 @@
+.features {
+    text-align: center;
+    margin-block: 40px;
+}
+
+.features p {
+    padding: 16px;
+    margin-top: 10px;
+}
+
+.tab__head {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tab__head button {
+    padding: 10px;
+    background: transparent !important;
+    border: none;
+    border-bottom: 2px solid rgba(102, 58, 58, 0.2);
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+
+
+
+.tab__head button.activetab::before {
+    content: "";
+    border-bottom: 2px solid blue;
+    width: 60%;
+    height: 2px;
+    left: 20%;
+    position: absolute;
+    bottom: -3%;
+    pointer-events: none;
+}
+
+.tab__content {
+    margin-top: 20px;
+}
+
+.tab__content .img__wrapper {
+    position: relative;
+}
+
+.tab__content img {
+    width: 80%;
+    height: 80%;
+    margin: 0 0 10% 20%;
+}
+
+.tab__content .img__wrapper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: blue;
+    height: 60%;
+    width: 80%;
+    z-index: -1;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.tab__details {
+    text-align: center;
+    padding: 20px;
+}
+
+.tab__details p {
+    padding: 25px;
+}
+
+.more--info {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .tab__details p {
+        padding: 20px 0;
+    }
+
+    .features p {
+        padding: 0;
+    }
+
+    .tab__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 350px;
+        position: relative;
+    }
+
+    .tab__content>div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tab__head {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px auto;
+    }
+
+    .tab__head button.activetab::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .img__wrapper {
+        height: 100%;
+        position: relative;
+    }
+
+    .tab__content img {
+        width: 60%;
+        margin: 0 0 0 30%;
+
+    }
+
+    .tab__details {
+        padding: 0 150px 0 60px;
+        text-align: start;
+    }
+
+    .tab__details {
+        font-size: 16px;
+    }
+
+    .features {
+        width: 40%;
+        margin: 40px auto;
+    }
+
+    .more--info {
+        display: flex;
+        padding: 10px 20px;
+        background: hsl(231, 69%, 60%);
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+    }
+}

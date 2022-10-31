@@ -1,0 +1,138 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 40px;
+    background: white;
+}
+
+.nav__wrapper {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: .5s;
+    z-index: -5;
+}
+
+.nav__wrapper.active {
+    background: hsl(229, 31%, 21%);
+    opacity: .9;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+
+}
+
+.nav__wrapper.active a {
+    color: #fff;
+}
+
+header.active .logo {
+    filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(43deg) brightness(102%) contrast(101%);
+
+}
+
+header nav {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 20px 0;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul li {
+    margin-inline: 10px;
+    border-top: 1px solid rgba(255, 251, 251, 20%);
+    width: 90%;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.login__link {
+    padding: 10px 100px;
+    border-radius: 5px;
+
+}
+
+header .login__link:hover {
+    border: 2px solid white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.menu {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.menu img {
+    height: 100%;
+    width: 100%;
+}
+
+header .social {
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .social a {
+    margin-inline: 20px;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .nav__wrapper,
+    header nav,
+    li {
+        all: unset;
+    }
+
+    header nav ul {
+        all: unset;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .login__link {
+        all: unset;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    header .social {
+        display: none;
+    }
+}

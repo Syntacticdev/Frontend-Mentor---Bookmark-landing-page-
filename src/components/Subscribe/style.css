@@ -1,0 +1,79 @@
+.subscribe {
+    background: hsl(231, 69%, 60%);
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subscribe h4 {
+    margin-bottom: 10px;
+}
+
+.subscribe span {
+    width: 250px;
+    text-align: center;
+}
+
+.subscribe__form {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5em;
+    width: 100%
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.subscribe__form input,
+.subscribe__form button {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+input {
+    border: 2px solid hsl(0, 94%, 66%);
+}
+
+.subscribe__form button {
+    background: hsl(0, 94%, 66%);
+    color: #fff;
+}
+
+.error-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.error_message {
+    font-size: 12px;
+    padding: 5px 0;
+    background-color: hsl(0, 94%, 66%);
+    border-radius: 5px;
+}
+
+.form-group.error {
+    background-color: hsl(0, 94%, 66%);
+    border-radius: 5px;
+}
+
+@media screen and (min-width:768px) {
+    .subscribe__form {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 68% 32%;
+        gap: .5em;
+        width: 50%;
+    }
+}

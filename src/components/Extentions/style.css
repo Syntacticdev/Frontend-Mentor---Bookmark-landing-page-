@@ -1,0 +1,108 @@
+.container {
+    margin-block: 40px;
+}
+
+
+.extension__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+.extension__head p {
+    margin-block: 10px;
+    font-size: 16px;
+}
+
+
+.extensions {
+    width: 100%;
+    display: grid;
+    gap: 3em;
+}
+
+.extension__card {
+    height: 350px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    box-shadow: 0px 10px 53px -3px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
+}
+
+.extension_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.extension__label {
+    margin: 20px;
+}
+
+.extension__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.extension__action {
+    border-top: 2px dotted hsl(229, 8%, 60%);
+    border-block-width: 3px;
+}
+
+.extension__download--btn {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: hsl(231, 69%, 60%);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.extension__version {
+    font-size: 14px;
+    color: hsl(229, 8%, 60%);
+}
+
+@media screen and (min-width:768px) {
+    .extension__head {
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .extensions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        width: 50%;
+        margin: 30px auto;
+    }
+
+    .extension__card {
+        height: 300px;
+        width: 200px;
+    }
+
+    .extension__card:nth-of-type(2) {
+        margin-top: 30px;
+    }
+
+    .extension__card:nth-of-type(3) {
+        margin-top: 60px;
+    }
+}
