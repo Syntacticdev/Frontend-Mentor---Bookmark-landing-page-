@@ -23,7 +23,7 @@ const Subscribe = (e) => {
         <div className='subscribe'>
             <h4>35,000+ already joined</h4>
             <span>Stay up-to-date with what we’re doing</span>
-            <form action={`https://formsubmit.co/${FORM_SUBMIT_EMAIL}`} method="POST" onSubmit={handleFormSubmit} className="subscribe__form">
+            <form action={`https://formsubmit.co/your-random-string`} method="POST" onSubmit={handleFormSubmit} className="subscribe__form">
                 <div className={`${error && 'error'} form-group`}>
                     <div className="input__wrapper">
                         <input name="email" ref={emailRef} type="email" placeholder='Enter your email address' required />
@@ -34,6 +34,7 @@ const Subscribe = (e) => {
                 </div>
                 <input type="text" name="_honey" style={{ display: "none" }}></input>
                 <input type="hidden" name="_subject" value="New Mail Subscription" />
+                <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
                 <button type='submit'>Contact Us</button>
             </form>
