@@ -28,7 +28,6 @@ const Subscribe = () => {
                         {error && <img className='error-icon' src="/images/icon-error.svg" alt="" />}
                     </div>
                     {error && <div className="error_message">Whoops, make sure it's an email</div>}
-                    {successful && <div className="success_message">Whoops, make sure it's an email</div>}
                 </div>
                 <input type="text" name="_honey" style={{ display: "none" }}></input>
                 <input type="hidden" name="_subject" value="New Mail Subscription" />

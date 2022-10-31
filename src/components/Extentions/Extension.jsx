@@ -38,6 +38,7 @@ const Extension = () => {
                             <h4 className='extension__label'>{ext.label}</h4>
                             <span className='extension__version'>{ext.version}</span>
                         </div>
+                        <img className='card_dot' src="/images/bg-dots.svg" alt="" />
                         <div className='extension__action'>
                             <button className='extension__download--btn'>{ext.action}</button>
                         </div>
