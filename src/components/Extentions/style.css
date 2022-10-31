@@ -17,6 +17,7 @@
 .extension__head p {
     margin-block: 10px;
     font-size: 16px;
+    padding: 0 10px;
 }
 
 
@@ -89,7 +90,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1em;
-        width: 50%;
+        width: 70%;
         margin: 30px auto;
     }
 

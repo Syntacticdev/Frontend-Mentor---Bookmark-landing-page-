@@ -46,7 +46,13 @@ input {
 .subscribe__form button {
     background: hsl(0, 94%, 66%);
     color: #fff;
+    cursor: pointer;
 }
+
+.subscribe__form button:hover {
+    background-color: rgb(11, 177, 11);
+}
+
 
 .error-icon {
     position: absolute;
@@ -60,6 +66,13 @@ input {
     font-size: 12px;
     padding: 5px 0;
     background-color: hsl(0, 94%, 66%);
+    border-radius: 5px;
+}
+
+.success_message {
+    font-size: 12px;
+    padding: 5px 0;
+    background-color: rgb(11, 177, 11);
     border-radius: 5px;
 }
 
