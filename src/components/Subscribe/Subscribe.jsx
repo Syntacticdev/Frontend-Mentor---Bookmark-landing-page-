@@ -1,19 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react'
 import "./style.css"
-
+import { FORM_SUBMIT_EMAIL } from "../../utils/env"
 const Subscribe = (e) => {
     const [error, setError] = useState(false)
     const [successful, setSuccessful] = useState(false)
     const emailRef = useRef(null)
     const handleFormSubmit = async (e) => {
-        // e.preventDefault()
         const re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2-8})?$/
         const matchAnEmail = re.test(emailRef.current.value)
         if (!matchAnEmail) {
             setError(true)
         }
     }
-
+    console.log(FORM_SUBMIT_EMAIL)
     useEffect(() => {
         setTimeout(() => {
             setError(false)
@@ -24,7 +23,7 @@ const Subscribe = (e) => {
         <div className='subscribe'>
             <h4>35,000+ already joined</h4>
             <span>Stay up-to-date with what we’re doing</span>
-            <form action={`https://formsubmit.co/${process.env.FORM_SUBMIT_EMAIL}`} method="POST" onSubmit={handleFormSubmit} className="subscribe__form">
+            <form action={`https://formsubmit.co/${FORM_SUBMIT_EMAIL}`} method="POST" onSubmit={handleFormSubmit} className="subscribe__form">
                 <div className={`${error && 'error'} form-group`}>
                     <div className="input__wrapper">
                         <input name="email" ref={emailRef} type="email" placeholder='Enter your email address' required />
