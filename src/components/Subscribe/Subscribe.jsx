@@ -9,8 +9,8 @@ const Subscribe = (e) => {
         const re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2-8})?$/
         const matchAnEmail = re.test(emailRef.current.value)
         if (!matchAnEmail) {
-            setError(true)
-            return
+            return setError(true)
+
         }
     }
     useEffect(() => {
